@@ -15,8 +15,21 @@ app.use(express.static('server/public'));
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Build array to hold operation history
 const historyArray = [];
-    
+
+app.get('/calculation', (req,res) => {
+
+})
+
+app.post('/calculation', (req,res) => {
+
+})
+
+function operations() {
+
+}
+
 
 
 
