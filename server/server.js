@@ -20,9 +20,6 @@ app.use(bodyParser.urlencoded({
 // Build array to hold operation history
 const historyArray = [];
 
-app.get('/calculation', (req, res) => {
-
-})
 
 app.post('/calculation', (req, res) => {
     let newOperation = req.body;
