@@ -4,7 +4,8 @@ $(document).ready(onReady);
 function onReady() {
     $('#calculateInputs').on('click', objectCapture)
     $('.operatorButton').on('click', getOperatorString)
-
+    $('#clearInputs').on('click', clearInputs)
+    getCalcHistory()
 
 
 } //end onReady
@@ -37,7 +38,7 @@ function objectCapture() {
         })
         .then(function (response) {
             console.log('Response from server', response);
-            render(response);
+            getCalcHistory();
             //this is where GET function goes!
         })
         .catch(function (error) {
@@ -48,7 +49,7 @@ function objectCapture() {
 
 } //end objectCapture
 
-function getInventory() {
+function getCalcHistory() {
     // ajax method returns back Promise
     $.ajax({
             method: 'GET',
