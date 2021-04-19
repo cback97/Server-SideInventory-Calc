@@ -13,9 +13,7 @@ app.use(express.static('server/public'));
 
 // set up how to read things from the request body
 const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({  extended: true}));
 
 // Build array to hold operation history
 const historyArray = [];
@@ -27,7 +25,6 @@ app.post('/calculation', (req, res) => {
     newOperation.solve = operations(newOperation)
     // push newOperation object into historyArray
     historyArray.push(newOperation)
-
 })
 
 function operations(newOperation) {
@@ -50,5 +47,5 @@ function operations(newOperation) {
 } // end swith statement function
 
 app.get('/calculation', (req, res) => {
-
+    res.send(historyArray)
 })

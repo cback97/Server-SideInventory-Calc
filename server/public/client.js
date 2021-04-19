@@ -52,7 +52,7 @@ function getInventory() {
     // ajax method returns back Promise
     $.ajax({
             method: 'GET',
-            url: '/inventory',
+            url: '/calculation',
         })
 
         .then(function (response) {
@@ -66,10 +66,10 @@ function getInventory() {
     console.log('After makin server request...');
 }
 
-function render(inventoryArray) {
-    $('#stocklist').empty();
-    for (let listed of inventoryArray) {
-        $('#stocklist').append(`<p>${listed.item}: ${listed.description}</p>`)
+function render(historyArray) {
+    $('#history').empty();
+    for (let op of historyArray) {
+        $('#history').append(`<p>${op.num1} ${op.operator} ${op.num2} = ${op.solve}</p>`)
     }
 }
 
