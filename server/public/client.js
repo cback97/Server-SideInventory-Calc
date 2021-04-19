@@ -3,12 +3,20 @@ $(document).ready(onReady);
 
 function onReady() {
     $('#calculateInputs').on('click', objectCalculation)
+    $('.operatorButton').on('click', getOperatorString)
 
 
 
 }
 
-let operator = '';
+
+
+function getOperatorString() {
+let operator = $(this).attr('value')
+console.log(operator);
+}
+
+
 function objectCalculation() {
  let inputCapture = {
      input1: $('#num1').val(),
