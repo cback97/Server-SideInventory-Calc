@@ -30,7 +30,7 @@ app.post('/calculation', (req, res) => {
     newOperation.solve = operations(newOperation)
     // push newOperation object into historyArray
     historyArray.push(newOperation)
-//check to m
+
 })
 
 function operations(newOperation) {
