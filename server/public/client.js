@@ -9,14 +9,6 @@ function onReady() {
 }
 
 
-
-
-
-// function handleTotal() {
-//     switch (operator) {
-//         case '+':
-//             total = +num1 + +num2;
-//             displayButton(total);
-//             break;
-//     }
-// }
+function objectCalculation() {
+    
+}
