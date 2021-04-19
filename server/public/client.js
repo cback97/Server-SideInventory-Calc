@@ -8,13 +8,16 @@ function onReady() {
 
 }
 
-
+let operator = '';
 function objectCalculation() {
  let inputCapture = {
      input1: $('#num1').val(),
+     operation: $(this).attr('class'),
      input2: $('#num2').val()
  }   
  return console.log(inputCapture);
+
+
 }
 
 //clear input fields
