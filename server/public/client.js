@@ -9,19 +9,19 @@ function onReady() {
 
 }
 
-// operator = '';
+let operator = '';
 
 function getOperatorString() {
-let operator = $(this).attr('value')
-console.log(operator);
+operator = $(this).attr('value')
 }
 
 
 function objectCalculation() {
  let inputCapture = {
      input1: $('#num1').val(),
-     operation: getOperatorString,
-     input2: $('#num2').val()
+     operator: operator,
+     input2: $('#num2').val(),
+     
  }   
  return console.log(inputCapture);
 
