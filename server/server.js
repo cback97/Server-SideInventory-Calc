@@ -8,8 +8,15 @@ app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 })
 
-
+// Server to derive data from server/public folders
 app.use(express.static('server/public'));
+
+// set up how to read things from the request body
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
+
+const historyArray = [];
+    
 
 
 
