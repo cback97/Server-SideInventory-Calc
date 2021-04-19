@@ -28,22 +28,28 @@ app.post('/calculation', (req, res) => {
 })
 
 function operations(newOperation) {
+    let solve;
     let num1 = newOperation.input1;
     let num2 = newOperation.input2;
     switch (newOperation.operator) {
         case '+':
             solve = num1 + num2;
-            return solve;
+            
+            break;
         case '-':
             solve = num1 - num2;
-            return solve;
+            
+            break;
         case '*':
             solve = num1 * num2;
-            return solve;
+            
+            break;
         case '/':
             solve = num1 / num2;
-            return solve;
+            
+            break;
     }
+    return solve;
 } // end swith statement function
 
 app.get('/calculation', (req, res) => {
